@@ -28,7 +28,7 @@ try{
     $routes = \FastRoute\simpleDispatcher(function (\FastRoute\RouteCollector $r) {
         $r->get('/hello',HelloController::class);
     });
-    var_dump($routes);exit;
+
     $requestHandler = new \Relay\Relay([
         new FastRoute($routes),
         new RequestHandler($container),
